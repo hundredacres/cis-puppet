@@ -23,7 +23,7 @@ class cis::linuxcontrols::c0015 {
     sysctl::value { 'fs.suid_dumpable': value => '0' }
     case $::osfamily {
         'RedHat': {
-            if $::operatingsystemmajrelease < 7 {
+            if $::operatingsystemmajrelease < '7' {
                 sysctl::value { 'kernel.exec-shield': value => '1' }
             }
         }

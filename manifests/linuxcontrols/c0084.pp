@@ -21,6 +21,6 @@ class cis::linuxcontrols::c0084 {
   }
 
   if $::f0003 == 'fail' {
-    warning('Node $fqdn failed CIS RHEL6 Control 9.1.12 (f0003)')
+    warning("Node $::fqdn failed CIS RHEL6 Control 9.1.12 (f0003)")
   }
 }
